@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.openfeign.support.SpringMvcContract;
 import org.springframework.context.annotation.Configuration;
 import studies.ericsson.momo.demo.helpers.FeignHelpers;
-import studies.ericsson.momo.demo.config.api.V10Api;
-
 
 @Configuration
 @Slf4j

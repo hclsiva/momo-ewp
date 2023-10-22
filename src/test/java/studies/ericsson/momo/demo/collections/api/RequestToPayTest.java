@@ -12,10 +12,9 @@ import studies.ericsson.momo.demo.collections.model.RequestToPayResult;
 import studies.ericsson.momo.demo.collections.model.TokenPost200ApplicationJsonResponse;
 import studies.ericsson.momo.demo.helpers.FeignHelpers;
 import studies.ericsson.momo.demo.config.MoMoUserCreationClientConfiguration;
-import studies.ericsson.momo.demo.config.api.V10Api;
-import studies.ericsson.momo.demo.config.model.ApiUser;
-import studies.ericsson.momo.demo.config.model.ApiUserKeyResult;
 import studies.ericsson.momo.demo.model.Response;
+import studies.ericsson.momo.demo.sandbox.prov.model.ApiUser;
+import studies.ericsson.momo.demo.sandbox.prov.model.ApiUserKeyResult;
 
 import java.io.IOException;
 import java.util.Base64;
@@ -27,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class RequestToPayTest {
-    private V10Api v10Api = null;
+    private studies.ericsson.momo.demo.sandbox.prov.api.V10Api v10Api = null;
     private TokenApi tokenApi = null;
     private studies.ericsson.momo.demo.collections.api.V10Api collectionApi = null;
     @Value("${provisioning.url}")
@@ -60,7 +59,7 @@ public class RequestToPayTest {
         log.info("Send API User Creation request to MoMo Sandbox ProviderHostName is " + providerHostName);
         ApiUser localhostApiUser = new ApiUser();
         localhostApiUser.setProviderCallbackHost(providerHostName);
-        v10Api = config.feignClientForMoMo(V10Api.class, momoUrl);
+        v10Api = config.feignClientForMoMo(studies.ericsson.momo.demo.sandbox.prov.api.V10Api.class, momoUrl);
         ResponseEntity<Void> response = v10Api.postV10Apiuser(userRefId,localhostApiUser);
         log.info("Value of response  "+ response);
         Assertions.assertEquals(201,response.getStatusCode().value());
