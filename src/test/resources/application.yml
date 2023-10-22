@@ -1,0 +1,5 @@
+BASE_URL: https://ericssonbasicapi2.azure-api.net/
+provisioning:
+  url: https://sandbox.momodeveloper.mtn.com
+  subscription:
+    key: c1686d286a134bce982493ca2b395d53

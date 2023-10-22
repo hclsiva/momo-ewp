@@ -1,0 +1,11 @@
+{
+  "amount": "900.0",
+  "currency": "EUR",
+  "externalId": "097411065",
+  "payer": {
+    "partyIdType": "MSISDN",
+    "partyId": "46733123453"
+  },
+  "payerMessage": "Sure thing!",
+  "payeeNote": "Payback my money bro!"
+}
