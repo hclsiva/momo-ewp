@@ -1,4 +1,4 @@
-![MoMo NBI Project Health](https://github.com/github/docs/actions/workflows/build.yml/badge.svg?branch=main)
+![MoMo NBI Build Status](https://github.com/hclsiva/momo-spring-demo/actions/workflows/build.yml/badge.svg?branch=main)
 
 # Northbound Java API for MoMo - Mobile Money APIs and Ericsson Wallet Pay
 
