@@ -1,4 +1,4 @@
-https://momodeveloper.mtn.com/api-documentation/api-description
+![MoMo NBI Project Health](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=main)
 
 # Northbound Java API for MoMo - Mobile Money APIs and Ericsson Wallet Pay
 
