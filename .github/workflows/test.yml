@@ -1,10 +1,14 @@
-name: tests
+name: Compile and Generate Junit Test Report
 
 on: push
 
 jobs:
   compile_and_test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
 
     steps:
       - name: Download repository
